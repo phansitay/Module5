@@ -1,0 +1,26 @@
+<h1>calculator</h1>
+<div>
+  <span>Number One :</span>
+  <input type="number" #one [value]="onNumberOneChange(one.value)">
+  <span>Number True :</span>
+  <input type="text"#two [value]="onNumberTwoChange(two.value)">
+
+  <span>Toán tử</span>
+  <select #operator [value]="onSelectChange(operator.value)" >
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+</div>
+<div>
+  <button (click)="changeNumber()">
+
+  </button>
+</div>
+<div >
+  <input type="text" [value]="output">
+</div>
+
+
+
