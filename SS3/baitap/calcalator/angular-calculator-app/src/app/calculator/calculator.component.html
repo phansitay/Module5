@@ -3,21 +3,20 @@
   <span>Number One :</span>
   <input type="number" #one [value]="onNumberOneChange(one.value)">
   <span>Number True :</span>
-  <input type="text"#two [value]="onNumberTwoChange(two.value)">
+  <input type="Number"#two [value]="onNumberTwoChange(two.value)">
 
   <span>Toán tử</span>
-  <select #operator [value]="onSelectChange(operator.value)" >
+  <select #operator (change)="onSelectChange(operator.value)"  >
+    <option >chọn phép tính</option>
     <option value="+">+</option>
     <option value="-">-</option>
     <option value="*">*</option>
     <option value="/">/</option>
   </select>
 </div>
-<div>
-  <button (click)="changeNumber()">
+<button (click)="changeNumber()">Tính</button>
 
-  </button>
-</div>
+<!--{{output}}-->
 <div >
   <input type="text" [value]="output">
 </div>

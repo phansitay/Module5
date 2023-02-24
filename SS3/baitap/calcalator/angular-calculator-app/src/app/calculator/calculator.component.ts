@@ -33,6 +33,7 @@ export class CalculatorComponent implements OnInit {
         break;
       case '/': this.output=this.numberOne/this.numberTwo;
         break;
+      default:
     }
   }
 }
