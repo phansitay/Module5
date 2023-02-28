@@ -1,0 +1,72 @@
+
+<link rel="stylesheet" href="register.component.css">
+<h1 style="text-align: center">Đăng kí tài khoản</h1>
+<div class="container">
+  <form action="" [formGroup]="registerForm" (ngSubmit)="registerUser()" >
+    <table class="table">
+      <tr>
+        <td>
+          Email
+        </td>
+        <td>
+          <input type="text">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Password
+        </td>
+        <td>
+          <input type="password" >
+
+<!--          <input type="checkbox" >-->
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Confirm Password
+        </td>
+        <td>
+          <input type="password">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Country
+        </td>
+        <td>
+          <input type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Age
+        </td>
+        <td>
+          <input type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Gender
+        </td>
+        <td>
+          <input type="radio" id="nam" name="fav_language" value="HTML">
+            <label for="nam">Nam</label>
+            <input type="radio" id="nu" name="fav_language" value="CSS">
+            <label for="nu">Nữ</label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Phone
+        </td>
+        <td>
+          <input type="text">
+        </td>
+      </tr>
+      <button type="button">Đăng kí</button>
+    </table>
+  </form>
+</div>

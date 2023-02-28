@@ -1,0 +1,14 @@
+.container{
+  width: 60%;
+  margin-left: 20%;
+  background-color: bisque;
+  height: 1000px;
+  /*position: absolute;*/
+}
+.table{
+  margin-left: 20%;
+}
+input{
+  border-radius: 5px;
+  border: 1px solid black;
+}
