@@ -9,7 +9,7 @@
           Email
         </td>
         <td>
-          <input type="text">
+          <input type="text" formControlName="email" name="email">
         </td>
       </tr>
 
@@ -18,8 +18,8 @@
           Password
         </td>
         <td>
-          <input type="password" >
-
+          <input type="password" formControlName="password" name="password">
+          <p style="color: red" *ngIf="registerForm.controls.password.hasError('required') && registerForm.controls.password.touched">Pass không đúng định dạng</p>
 <!--          <input type="checkbox" >-->
         </td>
       </tr>
@@ -28,7 +28,7 @@
           Confirm Password
         </td>
         <td>
-          <input type="password">
+          <input type="password" formControlName="confirmPassword" name="confirmPassword">
         </td>
       </tr>
       <tr>
@@ -36,7 +36,7 @@
           Country
         </td>
         <td>
-          <input type="text">
+          <input type="text" formControlName="country" name="country">
         </td>
       </tr>
       <tr>
@@ -44,7 +44,7 @@
           Age
         </td>
         <td>
-          <input type="text">
+          <input type="text" formControlName="age" name="age">
         </td>
       </tr>
       <tr>
@@ -52,9 +52,9 @@
           Gender
         </td>
         <td>
-          <input type="radio" id="nam" name="fav_language" value="HTML">
+          <input type="radio" id="nam" name="fav_language" value="HTML" formControlName="gender">
             <label for="nam">Nam</label>
-            <input type="radio" id="nu" name="fav_language" value="CSS">
+            <input type="radio" id="nu" name="fav_language" value="CSS" formControlName="gender">
             <label for="nu">Nữ</label>
         </td>
       </tr>
@@ -63,10 +63,10 @@
           Phone
         </td>
         <td>
-          <input type="text">
+          <input type="text" formControlName="phone" name="phone">
         </td>
       </tr>
-      <button type="button">Đăng kí</button>
+      <button type="submit">Đăng kí</button>
     </table>
   </form>
 </div>

@@ -1,0 +1,30 @@
+<div>
+  <h1 style="text-align: center">List Villa</h1>
+  <table class="table alert-danger table-content">
+    <tr>
+      <th>STT</th>
+      <th>Tên dịch vụ</th>
+      <th>Diện tích sử dụng</th>
+      <th>Chi phí thuê</th>
+      <th>Số lượng người tối đa</th>
+      <th>Kiểu thuê</th>
+      <th>Tiêu chuẩn phòng</th>
+      <th>Mô tả tiện nghi khác</th>
+      <th>Diện tích hồ bơi</th>
+      <th>Số tầng</th>
+    </tr>
+    <tr *ngFor="let item of villas;let i=index">
+      <td>{{i+1}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.area}}</td>
+      <td>{{item.price}}</td>
+      <td>{{item.peopleOfNumber}}</td>
+      <td>{{item.rentalType}}</td>
+      <td>{{item.standard}}</td>
+      <td>{{item.amenities}}</td>
+      <td>{{item.poolArea}}</td>
+      <td>{{item.numberOfFloors}}</td>
+
+    </tr>
+  </table>
+</div>
