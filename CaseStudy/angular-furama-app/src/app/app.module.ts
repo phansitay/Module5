@@ -11,6 +11,11 @@ import { HouseComponent } from './house/house.component';
 import { RoomComponent } from './room/room.component';
 import { CustomerComponent } from './customer/customer.component';
 import { ContractComponent } from './contract/contract.component';
+import { AddServiceComponent } from './add-service/add-service.component';
+import { AddCustomerComponent } from './add-customer/add-customer.component';
+import { AddContractComponent } from './add-contract/add-contract.component';
+import { UpdateServiceComponent } from './update-service/update-service.component';
+import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,12 @@ import { ContractComponent } from './contract/contract.component';
     HouseComponent,
     RoomComponent,
     CustomerComponent,
-    ContractComponent
+    ContractComponent,
+    AddServiceComponent,
+    AddCustomerComponent,
+    AddContractComponent,
+    UpdateServiceComponent,
+    UpdateCustomerComponent
   ],
   imports: [
     BrowserModule,
