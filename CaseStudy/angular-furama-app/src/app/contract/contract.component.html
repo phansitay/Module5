@@ -1,0 +1,21 @@
+<div>
+  <h1 style="text-align: center">List Contract</h1>
+  <table class="table alert-dark">
+    <tr>
+      <th>STT</th>
+      <th>Số hợp đồng</th>
+      <th>Ngày bắt đầu</th>
+      <th>Ngày kết thúc</th>
+      <th>Số tiền cọc trước</th>
+      <th>Tổng số tiền thanh toán</th>
+    </tr>
+    <tr *ngFor="let item of contracts;let i=index">
+      <td>{{i+1}}</td>
+      <td>{{item.contractId}}</td>
+      <td>{{item.dateBegin}}</td>
+      <td>{{item.dateEnd}}</td>
+      <td>{{item.advanceAmount}}</td>
+      <td>{{item.totalAmount}}</td>
+    </tr>
+  </table>
+</div>

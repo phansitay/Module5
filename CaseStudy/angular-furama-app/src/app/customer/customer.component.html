@@ -1,0 +1,27 @@
+<div>
+  <h1 style="text-align: center">List Customer</h1>
+  <table class="table alert-dark">
+    <tr>
+      <th>STT</th>
+      <th>Tên khách hàng</th>
+      <th>Ngày sinh</th>
+      <th>Giới tính</th>
+      <th>Số CMND</th>
+      <th>Số điện thoại</th>
+      <th>Email</th>
+      <th>Loại khách</th>
+      <th>Địa chỉ</th>
+    </tr>
+    <tr *ngFor="let item of customers;let i=index">
+      <td>{{i+1}}</td>
+      <td>{{item.nameCustomer}}</td>
+      <td>{{item.dayOfBirth}}</td>
+      <td *ngIf="item.sex"></td>
+      <td>{{item.cmnd}}</td>
+      <td>{{item.phone}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.typeCustomer}}</td>
+      <td>{{item.address}}</td>
+    </tr>
+  </table>
+</div>

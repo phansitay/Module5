@@ -9,6 +9,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HouseComponent } from './house/house.component';
 import { RoomComponent } from './room/room.component';
+import { CustomerComponent } from './customer/customer.component';
+import { ContractComponent } from './contract/contract.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { RoomComponent } from './room/room.component';
     HeaderComponent,
     FooterComponent,
     HouseComponent,
-    RoomComponent
+    RoomComponent,
+    CustomerComponent,
+    ContractComponent
   ],
   imports: [
     BrowserModule,
