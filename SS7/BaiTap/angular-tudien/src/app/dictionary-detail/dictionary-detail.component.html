@@ -1,0 +1,16 @@
+<div>
+  <h1 style="text-align: center;background-color: red">Trang chi tiết từ vựng</h1>
+  <button class="btn btn-primary" routerLink="/page">Quay lại trang từ điển</button>
+  <table>
+    <tr>
+      <th>Stt</th>
+      <th>Word</th>
+      <th>Mean</th>
+    </tr>
+    <tr *ngFor="let item of iwords; let  i = index">
+      <td>{{i}}</td>
+      <td>{{item.word}}</td>
+      <td>{{item.mean}}</td>
+    </tr>
+  </table>
+</div>

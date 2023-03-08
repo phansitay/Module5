@@ -1,4 +1,3 @@
-import {AbstractControl} from "@angular/forms";
 
 export interface Register {
   email?:string

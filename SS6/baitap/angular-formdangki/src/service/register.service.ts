@@ -35,6 +35,7 @@ export class RegisterService {
   constructor() { }
 
   save(register: FormGroup){
+    // @ts-ignore
     this._registers.push(register);
   }
 

@@ -3,17 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RegisterComponent } from './register/register.component';
-import {ReactiveFormsModule} from "@angular/forms";
-import { ListComponent } from './list/list.component';
-import { DetailComponent } from './detail/detail.component';
+import { DictionayPageComponent } from './dictionay-page/dictionay-page.component';
+import { DictionaryDetailComponent } from './dictionary-detail/dictionary-detail.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent,
-    ListComponent,
-    DetailComponent
+    DictionayPageComponent,
+    DictionaryDetailComponent,
+    MainComponent
   ],
     imports: [
         BrowserModule,
