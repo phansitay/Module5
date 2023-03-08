@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {AbstractControl, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Register} from "ts-node";
 import validate = WebAssembly.validate;
+import {RegisterService} from "../../service/register.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-register',
@@ -11,7 +13,8 @@ import validate = WebAssembly.validate;
 export class RegisterComponent implements OnInit {
   register?:Register;
   registerForm:FormGroup;
-  constructor() {
+  constructor(private _registerService: RegisterService,
+              private _router: Router) {
 
   }
 
@@ -41,5 +44,7 @@ export class RegisterComponent implements OnInit {
 
   onSubmit() {
     console.log(this.registerForm.value)
+    this._registerService.save(this.registerForm.value);
+    this._router.navigateByUrl("/list");
   }
 }

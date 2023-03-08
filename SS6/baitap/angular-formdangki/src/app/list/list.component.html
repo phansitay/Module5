@@ -1,0 +1,21 @@
+<div>
+
+  <table class="table table-striped">
+    <tr>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Country</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Phone</th>
+    </tr>
+    <tr *ngFor="let item of registers, let i = index">
+      <td>{{item.email}}</td>
+      <td>{{item.password}}</td>
+      <td>{{item.country}}</td>
+      <td>{{item.age}}</td>
+      <td>{{item.gender}}</td>
+      <td>{{item.phone}}</td>
+    </tr>
+  </table>
+</div>
