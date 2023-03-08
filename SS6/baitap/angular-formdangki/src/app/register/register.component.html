@@ -1,0 +1,67 @@
+<div style="width: 30%; background-color: #c1c49c; padding: 30px;margin-left: 35%;margin-top: 100px
+">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <table style="margin-left: 28px; padding-top: 30px">
+      <tr>
+        <td><label>Email</label></td>
+        <td>
+          <input type="text" formControlName="email" class="form-control">
+          <span *ngIf="registerForm.controls.email.touched && registerForm.controls.email.errors?.email" style="color: red" >Email khong hop le!</span>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Password</label></td>
+        <td>
+          <input type="password" formControlName="password" class="form-control">
+          <span style="color: red" *ngIf="registerForm.controls.password.touched && registerForm.controls.password.errors?.minlength">Mật khẩu phải dài hơn 6 chữ số</span>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Confirm Password</label></td>
+        <td>
+          <input type="password" formControlName="confirmPassword" class="form-control">
+          <span style="color: red" *ngIf="registerForm.controls.confirmPassword.touched && registerForm.controls.confirmPassword.errors?.minlength">Mật khẩu phải dài hơn 6 chữ số</span>
+          <span *ngIf="registerForm.hasError('not') && registerForm.controls.confirmPassword.touched" style="color: red">Mật khẩu không trùng khớp</span>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Country</label></td>
+        <td>
+          <select formControlName="country" class="form-select" aria-label="Default select example">
+            <option value="1">Viet Nam</option>
+            <option value="2">Lao</option>
+            <option value="3">Thai Lan</option>
+            <option value="4">Campuchia</option>
+            <option value="5">Trung Quoc</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Age</label></td>
+        <td><input type="number" formControlName="age" class="form-control">
+          <span style="color: red" *ngIf="registerForm.controls.age.touched && registerForm.controls.age.errors?.min">Tuổi phải lớn hơn 18</span>
+        </td>
+
+      </tr>
+      <tr>
+        <td><label>Gender</label></td>
+        <td>
+          <input type="radio" value="Nam" formControlName="gender" class="form-check-input">Nam
+          <input type="radio" value="Nu" formControlName="gender" class="form-check-input">Nu
+        </td>
+      </tr>
+      <tr>
+        <td><label>Phone</label></td>
+        <td>
+          <input type="text" formControlName="phone" class="form-control">
+          <span style="color: red" *ngIf="registerForm.controls.phone.touched && registerForm.controls.phone.errors?.pattern">So dien thoai khong dung dinh dang</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="btn btn-primary">Register</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>

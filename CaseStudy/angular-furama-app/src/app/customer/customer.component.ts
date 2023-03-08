@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Customer} from "../model/customer";
+import {CustomerServicceService} from "../../service/customer-servicce.service";
 
 @Component({
   selector: 'app-customer',
@@ -7,47 +8,16 @@ import {Customer} from "../model/customer";
   styleUrls: ['./customer.component.css']
 })
 export class CustomerComponent implements OnInit {
-  customers: Customer[]=[
-    {nameCustomer: "Võ nguyễn phát",
-      dayOfBirth: "12-02-2002",
-      sex: true,
-      cmnd: "09923923923923",
-      phone: "0999888777",
-      email: "vonguehd@hsssss",
-      typeCustomer: "thân thiết",
-      address: "quảng nam"
-    },
-    {nameCustomer: "Trần văn tuyên",
-      dayOfBirth: "12-02-2002",
-      sex: true,
-      cmnd: "09923923923923",
-      phone: "0999888777",
-      email: "vonguehd@hsssss",
-      typeCustomer: "thân thiết",
-      address: "quảng nam"
-    },
-    {nameCustomer: "Lê văn lợi",
-      dayOfBirth: "12-02-2002",
-      sex: true,
-      cmnd: "09923923923923",
-      phone: "0999888777",
-      email: "vonguehd@hsssss",
-      typeCustomer: "thân thiết",
-      address: "quảng nam"
-    },
-    {nameCustomer: "Trần quang minh",
-      dayOfBirth: "12-02-2002",
-      sex: true,
-      cmnd: "09923923923923",
-      phone: "0999888777",
-      email: "vonguehd@hsssss",
-      typeCustomer: "thân thiết",
-      address: "quảng nam"
-    }
-  ]
-  constructor() { }
-
-  ngOnInit(): void {
+  customers: Customer[] |undefined
+  constructor(private _customerService:CustomerServicceService) {
   }
 
+
+  ngOnInit(): void {
+    this.customers=this._customerService.customers;
+  }
+
+  getNewCustomer(value: Customer) {
+    this._customerService.save(value);
+  }
 }

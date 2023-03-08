@@ -1,1 +1,71 @@
-<p>add-customer works!</p>
+<div class="row">
+
+  <div style="height: 480px;width: 40%;background-color: #ff7a8a;border-radius: 6%;margin-left: 30%;margin-top: 50px">
+    <h2 style="text-align: center;margin-top: 20px">Add new Customer</h2>
+    <table style="margin: 35px">
+      <tr>
+        <td><label>Họ tên</label></td>
+        <td><input class="form-control" type="text" #nameCustomer></td>
+      </tr>
+      <tr>
+        <td><label>Ngày sinh</label></td>
+        <td><input class="form-control"  type="date"#dayOfBirth></td>
+      </tr>
+      <tr>
+        <td><label>Giới tính</label></td>
+        <td>
+          <input class="form-check-input" type="radio" value="Nam" name="sex" #sex1>Nam
+          <input class="form-check-input" type="radio" value="Nữ" name="sex" #sex2>Nữ
+        </td>
+      </tr>
+      <tr>
+        <td><label>Số CMND</label></td>
+        <td><input class="form-control" type="text" #cmnd>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Số điện thoại</label></td>
+        <td><input class="form-control" type="text" #phone>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Email</label></td>
+        <td><input  class="form-control" type="text" #email>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Loại khách</label></td>
+        <td><input class="form-check-input" type="radio" value="diamond" name="typeCustomer" #typeCustomer1>Diamond
+          <input class="form-check-input" type="radio" value="platinium" name="typeCustomer" #typeCustomer2>Platinium
+          <input class="form-check-input" type="radio" value="Goal" name="typeCustomer" #typeCustomer3>Goal
+          <input class="form-check-input" type="radio" value="Silver" name="typeCustomer" #typeCustomer4>Silver
+          <input class="form-check-input" type="radio" value="Member" name="typeCustomer" #typeCustomer5>Member
+        </td>
+      </tr>
+      <tr>
+        <td><label>Địa chỉ</label></td>
+        <td><input class="form-control" type="text" #address></td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          <button class="btn btn-primary" type="submit" (click)="addCustomer(nameCustomer.value,dayOfBirth.value,sex1.checked ? sex1.value:
+    sex2.checked ? sex2.value:'',cmnd.value,phone.value,email.value,
+    typeCustomer1.checked ?typeCustomer1.value:
+    typeCustomer2.checked ? typeCustomer2.value:
+    typeCustomer3.checked ? typeCustomer3.value:
+    typeCustomer4.checked ? typeCustomer4.value:
+    typeCustomer5.checked ? typeCustomer5.value:'',
+    address.value)
+">Add Customer</button>
+        </td>
+        <td>
+          <button class="btn btn-primary" type="submit" routerLink="/customer" >Trở lại</button>
+        </td>
+      </tr>
+    </table>
+
+
+
+  </div>
+</div>

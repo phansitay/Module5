@@ -1,5 +1,11 @@
 <div>
-  <h1 style="text-align: center">List Customer</h1>
+  <div class="menu">
+    <h1 style="float: left;color: #ffffff; line-height: 80px;position: absolute">List Customer</h1>
+
+    <button class="btn btn-primary button-add" type="submit" routerLink="/add-customer">
+      Thêm mới khách hàng
+    </button>
+  </div>
   <table class="table alert-dark">
     <tr>
       <th>STT</th>
@@ -11,17 +17,22 @@
       <th>Email</th>
       <th>Loại khách</th>
       <th>Địa chỉ</th>
+      <th>Action</th>
     </tr>
     <tr *ngFor="let item of customers;let i=index">
       <td>{{i+1}}</td>
       <td>{{item.nameCustomer}}</td>
       <td>{{item.dayOfBirth}}</td>
-      <td *ngIf="item.sex"></td>
+      <td>{{item.sex}}</td>
       <td>{{item.cmnd}}</td>
       <td>{{item.phone}}</td>
       <td>{{item.email}}</td>
       <td>{{item.typeCustomer}}</td>
       <td>{{item.address}}</td>
+      <td><a ></a></td>
     </tr>
   </table>
+</div>
+<div>
+<!--  <app-add-customer (newCustomer) ="getNewCustomer($event)"></app-add-customer>-->
 </div>

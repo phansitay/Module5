@@ -1,7 +1,7 @@
 export interface Customer {
   nameCustomer?: string
   dayOfBirth?: string
-  sex?:boolean
+  sex?:string
   cmnd?: string
   phone?: string
   email?: string
