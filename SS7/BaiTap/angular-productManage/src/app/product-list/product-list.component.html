@@ -1,0 +1,21 @@
+<div>
+  <button class="btn btn-primary" routerLink="/create" style="margin-left: 30%">Thêm mới sản phẩm</button>
+  <table style="width: 100%;">
+    <tr>
+      <th>Id</th>
+      <th>Tên</th>
+      <th>Gía</th>
+      <th>Mổ tả</th>
+      <th>Action</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor=" let item of products; index as i">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.price}}</td>
+      <td>{{item.description}}</td>
+      <td ><button class="btn btn-primary" (click)="showDetail(item)" [routerLink]="['/detail',item.id]" >Detail</button></td>
+      <td ><button class="btn btn-primary" [routerLink]="['/edit',item.id]" >Edit</button></td>
+    </tr>
+  </table>
+</div>
