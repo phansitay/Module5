@@ -1,0 +1,77 @@
+<div>
+  <div class="menu">
+    <h1 style="float: left;color: #ffffff; line-height: 80px;position: absolute">List Customer</h1>
+
+    <button class="btn btn-primary button-add" type="submit" routerLink="/add-customer">
+      Thêm mới khách hàng
+    </button>
+  </div>
+  <table class="table alert-content">
+    <tr>
+      <th>STT</th>
+      <th>Mã khách hàng</th>
+      <th>Tên khách hàng</th>
+      <th>Ngày sinh</th>
+      <th>Giới tính</th>
+      <th>Số CMND</th>
+      <th>Số điện thoại</th>
+      <th>Email</th>
+      <th>Loại khách</th>
+      <th>Địa chỉ</th>
+      <th>Action</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let item of customers;let i=index">
+      <td>{{i+1}}</td>
+      <td>{{item.id}}</td>
+      <td>{{item.nameCustomer}}</td>
+      <td>{{item.dayOfBirth}}</td>
+      <td>{{item.sex}}</td>
+      <td>{{item.cmnd}}</td>
+      <td>{{item.phone}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.typeCustomer.name}}</td>
+      <td>{{item.address}}</td>
+      <td>
+        <button class="btn btn-success " [routerLink]="['/editCustomer',item.id]">Edit</button>
+      </td>
+      <td>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" (click)="showId(item.id,item.nameCustomer)">
+            Delete
+          </button>
+
+<!--        <button [routerLink]="['/deleteCustomer',item.id]">delete</button>-->
+      </td>
+    </tr>
+  </table>
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Delete Customer</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          Bạn có thực sự muốn xóa <span>{{nameDelete}}</span>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal" [routerLink]="['/deleteCustomer',idDelete]">Delete</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

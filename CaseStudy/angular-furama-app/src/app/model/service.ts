@@ -9,4 +9,5 @@ export interface Service {
   poolArea?: number
   numberOfFloors?: number
   freeServiceIncluded?: string
+  image?:string
 }

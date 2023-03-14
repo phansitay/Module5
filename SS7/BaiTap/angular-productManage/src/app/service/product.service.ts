@@ -52,7 +52,7 @@ export class ProductService {
     this._products.push(product);
   }
   getProductById(id: number){
-    return this._products[id-1];
+    return this._products[id];
   }
   update(id: number,product: Product){
     for (let i=0;i<this._products.length;i++){

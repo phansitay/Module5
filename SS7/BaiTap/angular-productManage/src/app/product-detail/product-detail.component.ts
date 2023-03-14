@@ -32,10 +32,10 @@ export class ProductDetailComponent implements OnInit {
 
   }
 
-  delete(id: number) {
-    id = this.productDetail.id;
-    console.log("id xoa là : "+id);
-    this.productService.delete(id);
+  delete() {
+  //   id = this.productDetail.id;
+  //   console.log("id xoa là : "+id);
+    this.productService.delete(this.productDetail.id);
     this.router.navigateByUrl("/productList");
   }
 }

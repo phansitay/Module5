@@ -2,6 +2,7 @@ table {
   border-collapse: collapse;
   width: 80%;
   margin-left: 10%;
+  box-shadow: 2px 2px 5px 2px rgb(207 197 197);
 }
 
 th, td {
@@ -29,6 +30,7 @@ th {
   height: 80px;
   background-color: #FF66CC;
   position: relative;
+  box-shadow: 2px 2px 5px 2px rgb(207 197 197);
 }
 .button-add{
   height: 50px;

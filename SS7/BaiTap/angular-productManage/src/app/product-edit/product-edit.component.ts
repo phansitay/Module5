@@ -32,10 +32,10 @@ export class ProductEditComponent implements OnInit {
 
   }
 
-  submitEdit(id: number) {
-    id=this.productDetailEdit.id;
-      this.productService.update(id,this.productFormEdit.value);
-      console.log("aaa : "+id)
+  submitEdit() {
+    // id=this.productDetailEdit.id;
+      this.productService.update(this.productDetailEdit.id,this.productFormEdit.value);
+      // console.log("aaa : "+id)
       this.router.navigateByUrl("/productList");
   }
 }

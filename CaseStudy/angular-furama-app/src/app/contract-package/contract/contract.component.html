@@ -1,0 +1,28 @@
+<div>
+
+  <div class="menu">
+    <h1 style="float: left;color: #ffffff; line-height: 80px;position: absolute">List Contract</h1>
+
+    <button class="btn btn-primary button-add" routerLink="/add-contract">Thêm mới hợp đồng</button>
+  </div>
+  <table class="table alert-content">
+    <tr>
+      <th>STT</th>
+      <th>Số hợp đồng</th>
+      <th>Ngày bắt đầu</th>
+      <th>Ngày kết thúc</th>
+      <th>Số tiền cọc trước</th>
+      <th>Tổng số tiền thanh toán</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let item of contracts;let i=index">
+      <td>{{i+1}}</td>
+      <td>{{item.contractId}}</td>
+      <td>{{item.dateBegin}}</td>
+      <td>{{item.dateEnd}}</td>
+      <td>{{item.advanceAmount}}</td>
+      <td>{{item.totalAmount}}</td>
+      <td><button class="btn btn-success" [routerLink]="['/editContract',item.contractId]">Edit</button></td>
+    </tr>
+  </table>
+</div>

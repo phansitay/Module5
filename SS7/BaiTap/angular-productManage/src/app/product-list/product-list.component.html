@@ -14,8 +14,8 @@
       <td>{{item.name}}</td>
       <td>{{item.price}}</td>
       <td>{{item.description}}</td>
-      <td ><button class="btn btn-primary" (click)="showDetail(item)" [routerLink]="['/detail',item.id]" >Detail</button></td>
-      <td ><button class="btn btn-primary" [routerLink]="['/edit',item.id]" >Edit</button></td>
+      <td ><button class="btn btn-primary" (click)="showDetail(item)" [routerLink]="['/detail',item.id-1]" >Detail</button></td>
+      <td ><button class="btn btn-primary" [routerLink]="['/edit',item.id-1]" >Edit</button></td>
     </tr>
   </table>
 </div>

@@ -1,0 +1,105 @@
+<div class="row">
+
+  <div style="height: auto;width: 40%;background-color: #ff7a8a;border-radius: 6%;margin-left: 30%;margin-top: 50px">
+    <h2 style="text-align: center;margin-top: 20px">Add new Customer</h2>
+    <form [formGroup]="customerFormEdit" (ngSubmit)="submitEditCustomer()">
+      <table style="margin-left: 10%; margin-bottom: 8%">
+        <tr hidden>
+          <td>
+            <label class="form-label">Customer Id</label>
+          </td>
+          <td>
+            <input class="form-control" type="text" formControlName="id">
+            <span style="color: red" *ngIf="customerFormEdit.controls.id.touched && customerFormEdit.controls.id.errors?.required">Mã khách hàng Không được để trống</span>
+            <span style="color: red" *ngIf="customerFormEdit.controls.id.touched && customerFormEdit.controls.id.errors?.pattern">Mã khách hàng không đúng định dạng <span style="color: blue">(KH-XXXX)</span></span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="form-label">Customer Name</label>
+          </td>
+          <td>
+            <input class="form-control" type="text" formControlName="nameCustomer">
+            <span style="color: red" *ngIf="customerFormEdit.controls.nameCustomer.touched && customerFormEdit.controls.nameCustomer.errors?.minlength">Tên khách hàng phải dài hơn 8 kí tự</span>
+            <br>
+            <!--            <span style="color: red" *ngIf="customerFormAdd.controls.nameCustomer.touched && customerFormAdd.controls.nameCustomer.errors?.pattern">Tên không được bắt đầu bằng số</span>-->
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="form-label">Day Of Birth</label></td>
+          <td>
+            <input class="form-control" type="date" formControlName="dayOfBirth">
+            <span style="color: red" *ngIf="customerFormEdit.controls.dayOfBirth.touched && customerFormEdit.controls.dayOfBirth.errors?.required">Ngày sinh không được bỏ trống</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="form-label">Sex</label>
+          </td>
+          <td>
+            <input class="form-check-input" type="radio" value="Nam" formControlName="sex" >Nam
+            <input class="form-check-input" type="radio" value="Nữ" formControlName="sex">Nữ
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="form-label">
+              CMND
+            </label>
+          </td>
+          <td>
+            <input class="form-control" type="text" formControlName="cmnd">
+            <span style="color: red" *ngIf="customerFormEdit.controls.cmnd.touched && customerFormEdit.controls.cmnd.errors?.pattern">CMND phải theo định dạng <span style="color: blue">(XXXXXXXXX OR XXXXXXXXXXXX)</span></span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="form-label">Phone</label>
+          </td>
+          <td>
+            <input  class="form-control" type="text" formControlName="phone">
+            <span style="color: red" *ngIf="customerFormEdit.controls.phone.touched && customerFormEdit.controls.phone.errors?.pattern">Số điện thoại phải theo định dạng <span style="color: blue">(090XXXXXXX)</span></span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="form-label">
+              Email
+            </label>
+          </td>
+          <td>
+            <input class="form-control" type="text" formControlName="email">
+            <span style="color:red;" *ngIf="customerFormEdit.controls.email.touched && customerFormEdit.controls.email.errors?.email">Email không đúng định dạng</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="form-label">
+              TypeCustomer
+            </label>
+          </td>
+          <td>
+            <select class="form-select" name="" id="" formControlName="typeCustomer">
+              <option selected *ngFor="let item of customerTypes" [ngValue]="item">{{item.name}}</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label class="form-label">Address</label></td>
+          <td>
+            <input class="form-control" type="text" formControlName="address">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="btn btn-primary" >Sửa</button>
+          </td>
+          <td>
+            <button class="btn btn-primary" routerLink="/customer">Exit</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>

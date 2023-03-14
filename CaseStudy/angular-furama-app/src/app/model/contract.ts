@@ -1,5 +1,5 @@
 export interface Contract {
-  contractId?:number
+  contractId?:string
   dateBegin?:string
   dateEnd?:string
   advanceAmount?:number

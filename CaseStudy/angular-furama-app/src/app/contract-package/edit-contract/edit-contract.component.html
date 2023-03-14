@@ -1,0 +1,67 @@
+<div class="row">
+
+  <div style="height: auto;width: 40%;background-color: #ff7a8a;border-radius: 6%;margin-left: 30%;margin-top: 50px">
+    <h2 style="text-align: center;margin-top: 20px">Add new Contract</h2>
+    <form [formGroup]="contractFormEdit" (ngSubmit)="submitEditContract()">
+      <table style="margin-left: 10%; margin-bottom: 8%">
+        <tr hidden>
+          <td>
+            <label class="form-label">Contract Id</label>
+          </td>
+          <td>
+            <input class="form-control" type="text" formControlName="contractId">
+<!--            <span style="color: red" *ngIf="contractFormCreate.controls.contractId.touched && contractFormCreate.controls.contractId.errors?.required">Mã hợp đồng Không được để trống</span>-->
+<!--            <span style="color: red" *ngIf="contractFormCreate.controls.contractId.touched && contractFormCreate.controls.contractId.errors?.pattern">Mã hợp đồng không đúng định dạng <span style="color: blue">(HD-XXX)</span></span>-->
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="form-label">dateBegin</label>
+          </td>
+          <td>
+            <input class="form-control" type="date" formControlName="dateBegin">
+            <!--            <span style="color: red" *ngIf="customerFormAdd.controls.nameCustomer.touched && customerFormAdd.controls.nameCustomer.errors?.minlength">Tên khách hàng phải dài hơn 8 kí tự</span>-->
+            <!--            <br>-->
+            <!--            <span style="color: red" *ngIf="customerFormAdd.controls.nameCustomer.touched && customerFormAdd.controls.nameCustomer.errors?.pattern">Tên không được bắt đầu bằng số</span>-->
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="form-label">dateEnd</label></td>
+          <td>
+            <input class="form-control" type="date" formControlName="dateEnd">
+            <!--            <span style="color: red" *ngIf="customerFormAdd.controls.dayOfBirth.touched && customerFormAdd.controls.dayOfBirth.errors?.required">Ngày sinh không được bỏ trống</span>-->
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="form-label">
+              Advance Amount
+            </label>
+          </td>
+          <td>
+            <input class="form-control" type="text" formControlName="advanceAmount">
+            <!--            <span style="color: red" *ngIf="customerFormAdd.controls.cmnd.touched && customerFormAdd.controls.cmnd.errors?.pattern">CMND phải theo định dạng <span style="color: blue">(XXXXXXXXX OR XXXXXXXXXXXX)</span></span>-->
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="form-label">Total Amount</label>
+          </td>
+          <td>
+            <input  class="form-control" type="text" formControlName="totalAmount">
+            <!--            <span style="color: red" *ngIf="customerFormAdd.controls.phone.touched && customerFormAdd.controls.phone.errors?.pattern">Số điện thoại phải theo định dạng <span style="color: blue">(090XXXXXXX)</span></span>-->
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="btn btn-primary" [disabled]="contractFormEdit.invalid">Sửa</button>
+          </td>
+          <td>
+            <button class="btn btn-primary" routerLink="/contract">Exit</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>
