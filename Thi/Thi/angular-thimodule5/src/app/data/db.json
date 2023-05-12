@@ -1,0 +1,33 @@
+{
+  "category": [],
+  "product": [
+    {
+      "id": "sp03",
+      "name": "đậu",
+      "xuatxu": "quảng nam",
+      "price": 23000,
+      "dvt": "thùng"
+    },
+    {
+      "id": "sp04",
+      "name": "bò húc",
+      "xuatxu": "quảng nam",
+      "price": 23000,
+      "dvt": "thùng"
+    },
+    {
+      "id": "sp05",
+      "name": "milinda",
+      "xuatxu": "quảng nam",
+      "price": 23000,
+      "dvt": "thùng"
+    },
+    {
+      "id": "sp06",
+      "name": "pepsi",
+      "xuatxu": "quảng nam",
+      "price": 23000,
+      "dvt": "thùng"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+<div class="row">
+
+  <div style="height: auto;width: 40%;background-color: #ff7a8a;border-radius: 6%;margin-left: 30%;margin-top: 50px">
+    <h2 style="text-align: center;margin-top: 20px">Add new Customer</h2>
+    <form [formGroup]="studentFormAdd" (ngSubmit)="submitStudent()">
+      <table style="margin-left: 10%; margin-bottom: 8%">
+        <tr>
+          <td>
+            <label class="form-label">Student Id</label>
+          </td>
+          <td>
+            <input class="form-control" type="text" formControlName="id">
+<!--            <span style="color: red" *ngIf="customerFormAdd.controls.id.touched && customerFormAdd.controls.id.errors?.required">Mã khách hàng Không được để trống</span>-->
+<!--            <span style="color: red" *ngIf="customerFormAdd.controls.id.touched && customerFormAdd.controls.id.errors?.pattern">Mã khách hàng không đúng định dạng <span style="color: blue">(KH-XXXX)</span></span>-->
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="form-label">Student Name</label>
+          </td>
+          <td>
+            <input class="form-control" type="text" formControlName="name">
+<!--            <span style="color: red" *ngIf="customerFormAdd.controls.nameCustomer.touched && customerFormAdd.controls.nameCustomer.errors?.minlength">Tên khách hàng phải dài hơn 8 kí tự</span>-->
+            <br>
+            <!--            <span style="color: red" *ngIf="customerFormAdd.controls.nameCustomer.touched && customerFormAdd.controls.nameCustomer.errors?.pattern">Tên không được bắt đầu bằng số</span>-->
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="form-label">Day Of Birth</label></td>
+          <td>
+            <input class="form-control" type="date" formControlName="dayOfBirth">
+<!--            <span style="color: red" *ngIf="customerFormAdd.controls.dayOfBirth.touched && customerFormAdd.controls.dayOfBirth.errors?.required">Ngày sinh không được bỏ trống</span>-->
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label class="form-label">
+              Class
+            </label>
+          </td>
+          <td>
+            <select class="form-select" name="" id="" formControlName="class">
+              <option selected *ngFor="let item of class" [ngValue]="item">{{item.name}}</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label class="form-label">Phone</label>
+          </td>
+          <td>
+            <input  class="form-control" type="text" formControlName="phone">
+<!--            <span style="color: red" *ngIf="customerFormAdd.controls.phone.touched && customerFormAdd.controls.phone.errors?.pattern">Số điện thoại phải theo định dạng <span style="color: blue">(090XXXXXXX)</span></span>-->
+          </td>
+        </tr>
+
+        <tr>
+          <td><label class="form-label">Address</label></td>
+          <td>
+            <input class="form-control" type="text" formControlName="address">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="btn btn-primary">Đăng kí</button>
+          </td>
+          <td>
+            <button class="btn btn-primary" routerLink="/student">Exit</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>
+
+<button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="..." class="rounded me-2" alt="...">
+      <strong class="me-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>

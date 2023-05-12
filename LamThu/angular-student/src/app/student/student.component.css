@@ -1,0 +1,42 @@
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: 10%;
+  box-shadow: 2px 2px 5px 2px rgb(207 197 197);
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  height: 80px;
+  font-size: 20px;
+}
+
+tr:nth-child(even){
+  background-color: #FF9999;
+}
+
+th {
+  background-color: #FF6699	;
+  color: white;
+}
+
+/*menu*/
+.menu{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 80%;
+  margin-left: 10%;
+  height: 80px;
+  background-color: #FF66CC;
+  position: relative;
+  box-shadow: 2px 2px 5px 2px rgb(207 197 197);
+}
+.button-add{
+  height: 50px;
+  width:20%;
+  padding: 0px;
+  margin-top: 15px;
+  margin-left: 75%;
+  position: absolute;
+}

@@ -1,0 +1,26 @@
+<div>
+  <form [formGroup]="productFormDelete" (ngSubmit)="delete()">
+    <table>
+      <tr>
+        <td>Id</td>
+        <td>{{productDetail.id}}</td>
+      </tr>
+      <tr>
+        <td>Tên sản phẩm : </td>
+        <td>{{productDetail.name}}</td>
+      </tr>
+      <tr>
+        <td>Gía sản phẩm</td>
+        <td>{{productDetail.price}}</td>
+      </tr>
+      <tr>
+        <td>Mô tả</td>
+        <td>{{productDetail.description}}</td>
+      </tr>
+      <tr>
+        <td><button class="btn btn-primary">Delete</button></td>
+        <td></td>
+      </tr>
+    </table>
+  </form>
+</div>

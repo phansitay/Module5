@@ -1,0 +1,73 @@
+<div>
+  <div class="menu">
+    <h1 style="float: left;color: #ffffff; line-height: 80px;position: absolute">List Customer</h1>
+
+    <button class="btn btn-primary button-add" type="submit" routerLink="/add">
+      Nhập hàng
+    </button>
+  </div>
+  <table class="table alert-content">
+    <tr>
+      <th>Mã lô hàng</th>
+      <th>Tên sản phẩm</th>
+      <th>Gía tiền</th>
+      <th>Đơn vị</th>
+      <th>Số lượng</th>
+      <th>Ngày nhập hàng</th>
+      <th>Ngày sản xuất</th>
+      <th>Ngày hết hạn</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let item of categorys;let i=index">
+      <td>{{item.id}}</td>
+      <td>{{item.product.name}}</td>
+      <td>{{item.product.price}}</td>
+      <td>{{item.product.dvt}}</td>
+      <td>{{item.quantity}}</td>
+      <td>{{item.dateBegin |date: "dd/MM/yyyy"}}</td>
+      <td>{{item.dateBody |date: "dd/MM/yyyy"}}</td>
+      <td>{{item.dateEnd |date: "dd/MM/yyyy"}}</td>
+      <td>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" (click)="showId(item.id,item.product.name,item.dateBegin)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </table>
+<!--  <pagination-controls (pageChange)="p = $event" style="text-align: center"></pagination-controls>-->
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Xác nhận</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+                    Bạn có thực sự muốn xóa <span>{{name}}</span> nhập ngày <span>{{date}}</span>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" [routerLink]="['/delete',id]">Delete</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--<pagination-controls (pageChange)="p = $event" style="text-align: center"></pagination-controls>-->
+<!--<button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>-->
+
+
+
+<!--(click)="showId(item.id,item.nameCustomer)-->
+
+
+
+

@@ -17,7 +17,7 @@ export class ProductEditComponent implements OnInit {
               private activatedRoute: ActivatedRoute) {
     const id = this.activatedRoute.snapshot.params['id'];
     console.log("id : " +id);
-    this.productDetailEdit = this.productService.getProductById(id);
+    // this.productDetailEdit = this.productService.getProductById(id);
   }
 
   ngOnInit(): void {
@@ -34,7 +34,7 @@ export class ProductEditComponent implements OnInit {
 
   submitEdit() {
     // id=this.productDetailEdit.id;
-      this.productService.update(this.productDetailEdit.id,this.productFormEdit.value);
+    //   this.productService.update(this.productDetailEdit.id,this.productFormEdit.value);
       // console.log("aaa : "+id)
       this.router.navigateByUrl("/productList");
   }

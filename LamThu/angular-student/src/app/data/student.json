@@ -1,0 +1,99 @@
+{
+  "student": [
+    {
+      "id": "st1",
+      "name": "trần đăng đình",
+      "dayOfBirth": "2001-12-12",
+      "class": {
+        "id": 1,
+        "name": "a0422i1"
+      },
+      "phone": "0900999999",
+      "address": "quảng nam"
+    },
+    {
+      "id": "st2",
+      "name": "trần đăng đình",
+      "dayOfBirth": "2001-12-12",
+      "class": {
+        "id": 1,
+        "name": "a0422i1"
+      },
+      "phone": "0900999999",
+      "address": "quảng nam"
+    },
+    {
+      "id": "st3",
+      "name": "trần đăng đình",
+      "dayOfBirth": "2001-12-12",
+      "class": {
+        "id": 1,
+        "name": "a0422i1"
+      },
+      "phone": "0900999999",
+      "address": "quảng nam"
+    },
+    {
+      "id": "st4",
+      "name": "trần đăng đình",
+      "dayOfBirth": "2001-12-12",
+      "class": {
+        "id": 1,
+        "name": "a0422i1"
+      },
+      "phone": "0900999999",
+      "address": "quảng nam"
+    },
+    {
+      "id": "5",
+      "name": "5",
+      "dayOfBirth": "2023-03-10",
+      "class": {
+        "id": 2,
+        "name": "a0622i1"
+      },
+      "phone": "5",
+      "address": "5"
+    },
+    {
+      "id": "7",
+      "name": "7",
+      "dayOfBirth": "2023-03-10",
+      "class": {
+        "id": 3,
+        "name": "a0722i1"
+      },
+      "phone": "7",
+      "address": "7"
+    },
+    {
+      "id": "8",
+      "name": "8",
+      "dayOfBirth": "2023-03-15",
+      "class": {
+        "id": 3,
+        "name": "a0722i1"
+      },
+      "phone": "8",
+      "address": "8"
+    }
+  ],
+  "class": [
+    {
+      "id": 1,
+      "name": "a0522i1"
+    },
+    {
+      "id": 2,
+      "name": "a0622i1"
+    },
+    {
+      "id": 3,
+      "name": "a0722i1"
+    },
+    {
+      "id": 4,
+      "name": "a0822i1"
+    }
+  ]
+}

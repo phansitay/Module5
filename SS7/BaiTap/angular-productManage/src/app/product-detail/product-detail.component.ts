@@ -18,7 +18,7 @@ export class ProductDetailComponent implements OnInit {
   ){
     const id = this.activatedRoute.snapshot.params['index'];
     console.log("index: " +id);
-    this.productDetail= this.productService.getProductById(id);
+    // this.productDetail= this.productService.getProductById(id);
   }
 
   ngOnInit(): void {
@@ -35,7 +35,7 @@ export class ProductDetailComponent implements OnInit {
   delete() {
   //   id = this.productDetail.id;
   //   console.log("id xoa là : "+id);
-    this.productService.delete(this.productDetail.id);
+  //   this.productService.delete(this.productDetail.id);
     this.router.navigateByUrl("/productList");
   }
 }

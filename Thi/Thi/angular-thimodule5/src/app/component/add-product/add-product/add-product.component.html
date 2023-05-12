@@ -1,0 +1,78 @@
+<div class="row">
+
+  <div style="height: auto;width: 40%;background-color: #ff7a8a;border-radius: 6%;margin-left: 30%;margin-top: 50px">
+    <h2 style="text-align: center;margin-top: 20px">Nhập hàng</h2>
+    <form [formGroup]="productFormAdd" (ngSubmit)="submitProduct()">
+      <table style="margin-left: 10%; margin-bottom: 8%">
+        <tr>
+          <td>
+            <label class="form-label">Mã lô hàng</label>
+          </td>
+          <td>
+            <input class="form-control" type="text" formControlName="id">
+                        <span style="color: red" *ngIf="productFormAdd.controls.id.touched && productFormAdd.controls.id.errors?.required">Mã lô hàng Không được để trống</span>
+                        <span style="color: red" *ngIf="productFormAdd.controls.id.touched && productFormAdd.controls.id.errors?.pattern">Mã lô hàng không đúng định dạng <span style="color: blue">(LH-XXXX)</span></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label class="form-label">
+              Sản phẩm
+            </label>
+          </td>
+          <td>
+            <select class="form-select" name="" id="" formControlName="product">
+              <option selected *ngFor="let item of product" [ngValue]="item">{{item.name}}</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label class="form-label">Số lượng</label>
+          </td>
+          <td>
+            <input class="form-control" type="text" formControlName="quantity">
+                        <span style="color: red" *ngIf="productFormAdd.controls.quantity.touched && productFormAdd.controls.quantity.errors?.min">Số lượng hàng phải lớn hơn 0</span>
+            </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="form-label">Ngày nhập hàng</label></td>
+          <td>
+            <input class="form-control" type="date" formControlName="dateBegin">
+            <!--            <span style="color: red" *ngIf="customerFormAdd.controls.dayOfBirth.touched && customerFormAdd.controls.dayOfBirth.errors?.required">Ngày sinh không được bỏ trống</span>-->
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="form-label">Ngày sản xuất</label></td>
+          <td>
+            <input class="form-control" type="date" formControlName="dateBody">
+            <!--            <span style="color: red" *ngIf="customerFormAdd.controls.dayOfBirth.touched && customerFormAdd.controls.dayOfBirth.errors?.required">Ngày sinh không được bỏ trống</span>-->
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="form-label">Ngày hết hạn</label></td>
+          <td>
+            <input class="form-control" type="date" formControlName="dateEnd">
+            <!--            <span style="color: red" *ngIf="customerFormAdd.controls.dayOfBirth.touched && customerFormAdd.controls.dayOfBirth.errors?.required">Ngày sinh không được bỏ trống</span>-->
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <button class="btn btn-primary">Nhập hàng</button>
+          </td>
+          <td>
+            <button class="btn btn-primary" routerLink="/list">Quay lại</button>
+          </td>
+        </tr>
+      </table>
+
+    </form>
+  </div>
+</div>

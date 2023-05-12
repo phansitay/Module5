@@ -1,0 +1,52 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "555",
+      "price": "55",
+      "description": "5"
+    },
+    {
+      "id": 2,
+      "name": "iphone 13",
+      "price": 120000,
+      "description": "98%"
+    },
+    {
+      "id": 3,
+      "name": "iphone 14",
+      "price": 120000,
+      "description": "98%"
+    },
+    {
+      "id": 4,
+      "name": "iphone 11",
+      "price": 120000,
+      "description": "98%"
+    },
+    {
+      "id": 5,
+      "name": "iphone x",
+      "price": 120000,
+      "description": "98%"
+    },
+    {
+      "id": 7,
+      "name": "7",
+      "price": "7",
+      "description": "7"
+    },
+    {
+      "id": -1,
+      "name": null,
+      "price": null,
+      "description": null
+    },
+    {
+      "id": 8,
+      "name": "8",
+      "price": "8",
+      "description": "8"
+    }
+  ]
+}
